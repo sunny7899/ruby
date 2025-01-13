@@ -5,6 +5,11 @@
 #   end
 
 require 'cgi'
+
+# Simulate CGI environment
+ENV['REQUEST_METHOD'] = 'GET'
+ENV['QUERY_STRING'] = ''
+
 cgi = CGI.new
 
 puts cgi.header
